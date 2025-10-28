@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Activity 1: Enter Your Name</h2>
+<form method="POST">
+  <input type="text" name="name" placeholder="Enter your name">
+  <button type="submit">Submit</button>
+</form>
+{% if name %}
+  <h3>Welcome, {{ name }}!</h3>
+{% endif %}
+{% endblock %}

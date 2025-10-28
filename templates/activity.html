@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Activities</h2>
+
+<div class="activity-grid">
+  <a href="{{ url_for('act1') }}" class="activity-card">
+    <h3>Activity 1</h3>
+    <p>Welcome Name</p>
+  </a>
+
+  <a href="{{ url_for('act2') }}" class="activity-card">
+    <h3>Activity 2</h3>
+    <p>HTML Inheritance</p>
+  </a>
+
+  <a href="{{ url_for('act3') }}" class="activity-card">
+    <h3>Activity 3</h3>
+    <p>Database Integration</p>
+  </a>
+</div>
+{% endblock %}

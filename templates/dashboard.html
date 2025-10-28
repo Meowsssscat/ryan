@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5 text-center">
+  <div class="card shadow-lg p-5 bg-light rounded">
+    <!-- Profile Image -->
+    <div class="profile-image-container">
+      <img src="{{ url_for('static', filename='images/Profile.png') }}" 
+           alt="Profile Picture" 
+           class="profile-image">
+      <div class="profile-status"></div>
+    </div>
+
+    <h1 class="mb-4 text-primary">Welcome, {{ username }} 👋</h1>
+    <p class="lead mb-4">
+      This is your personal dashboard for <strong>ITEL 304 – Integrative Programming</strong>.
+    </p>
+
+    <div class="mt-4">
+      <a href="{{ url_for('home') }}" class="btn btn-primary me-2">Home</a>
+      <a href="{{ url_for('about') }}" class="btn btn-success me-2">About</a>
+      <a href="{{ url_for('activity') }}" class="btn btn-warning me-2">Activities</a>
+      <a href="{{ url_for('logout') }}" class="btn btn-outline-danger">Logout</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
